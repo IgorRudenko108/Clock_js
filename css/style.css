@@ -1,3 +1,25 @@
+/* -- Переменные -- */
+:root {
+   /* -- Цвета -- */
+   --red: #ff5f5f;
+   --green: #a5feb3;
+
+   /* -- Время -- */
+   --one-hour: var(--green) 0.00% 8.4%;
+   --two-hour: var(--green) 8.4% 16.7%;
+   --tree-hour: var(--red) 16.7% 25%;
+   --four-hour: var(--green) 25% 33.3%;
+   --five-hour: var(--green) 33.3% 41.6%;
+   --six-hour: var(--green) 41.6% 50%;
+   --seven-hour: var(--green) 50% 58.4%;
+   --eight-hour: var(--red) 58.4% 66.7%;
+   --nine-hour: var(--red) 66.7% 75%;
+   --ten-hour: var(--green) 75% 83.4%;
+   --eleven-hour: var(--green) 83.4% 91.6%;
+   --twelve-hour: var(--red) 91.6% 100%;
+}
+/* -- /Переменные -- */
+
 *{
    margin: 0;
    padding: 0;
@@ -13,6 +35,7 @@ body{
 }
 
 .clock{
+   position: relative;
    width: 350px;
    height: 350px;
    display: flex;
@@ -36,14 +59,26 @@ body{
    position: absolute;
    border-radius: 50%;
    z-index: 999;
-   width: 35px;
-   height: 35px;
+   width: 15px;
+   height: 15px;
+   background-color: #000;
+}
 
-   background-image: url(../img/js.png);
+.clock::after{
+   content: '';
+   position: absolute;
+   border-radius: 50%;
+   z-index: -1;
+   background-image: url(../img/rolex.svg);
    background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
+   width: 120px;
+   height: 50px;
+   bottom: 110px;
 }
+
+
 
 .clock .hour,
 .clock .min,
@@ -101,29 +136,6 @@ body{
    border-radius: 6px 6px 0 0;
 }
 /* /-- Стрелки -- */
-
-/* -- Переменные -- */
-:root {
-   /* -- Цвета -- */
-   --red: #ff8585;
-   --green: #a5feb3;
-
-   /* -- Время -- */
-   --one-hour: var(--red) 0.00% 8.3%;
-   --two-hour: var(--red) 8.3% 16.6%;
-   --tree-hour: var(--green) 16.6% 24.9%;
-   --four-hour: var(--green) 24.9% 33.2%;
-   --five-hour: var(--green) 33.2% 41.5%;
-   --six-hour: var(--red) 41.8% 50.1%;
-   --seven-hour: var(--red) 50.1% 58.4%;
-   --eight-hour: var(--red) 58.4% 66.7%;
-   --nine-hour: var(--green) 66.7% 75.1%;
-   --ten-hour: var(--green) 75.1% 83.4%;
-   --eleven-hour: var(--green) 83.4% 91.7%;
-   --twelve-hour: var(--red) 91.7% 100%;
-}
-/* -- /Переменные -- */
-
 
 /* -- Диаграмма на часах -- */
 #clock-chart__container {
