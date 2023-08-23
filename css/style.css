@@ -34,11 +34,15 @@ body{
 .clock:before{
    content: '';
    position: absolute;
-   width: 15px;
-   height: 15px;
-   background-color: #000;
    border-radius: 50%;
    z-index: 999;
+   width: 35px;
+   height: 35px;
+
+   background-image: url(../img/js.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
 }
 
 .clock .hour,
@@ -47,6 +51,7 @@ body{
    position: absolute;
 }
 
+/* -- Стрелки -- */
 .clock .hour, .hr{
    width: 160px;
    height: 160px;
@@ -95,22 +100,61 @@ body{
    z-index: 12;
    border-radius: 6px 6px 0 0;
 }
+/* /-- Стрелки -- */
+
+/* -- Переменные -- */
+:root {
+   /* -- Цвета -- */
+   --red: #ff8585;
+   --green: #a5feb3;
+
+   /* -- Время -- */
+   --one-hour: var(--red) 0.00% 8.3%;
+   --two-hour: var(--red) 8.3% 16.6%;
+   --tree-hour: var(--green) 16.6% 24.9%;
+   --four-hour: var(--green) 24.9% 33.2%;
+   --five-hour: var(--green) 33.2% 41.5%;
+   --six-hour: var(--red) 41.8% 50.1%;
+   --seven-hour: var(--red) 50.1% 58.4%;
+   --eight-hour: var(--red) 58.4% 66.7%;
+   --nine-hour: var(--green) 66.7% 75.1%;
+   --ten-hour: var(--green) 75.1% 83.4%;
+   --eleven-hour: var(--green) 83.4% 91.7%;
+   --twelve-hour: var(--red) 91.7% 100%;
+}
+/* -- /Переменные -- */
 
 
-/*--------------------------------------  */
-#my-pie-chart-container {
+/* -- Диаграмма на часах -- */
+#clock-chart__container {
    display: flex;
    align-items: center;
 }
 
-#my-pie-chart {
-   background: conic-gradient( #ff8585 0.00% 8.3%, #ff8585 8.3% 16.6%, #fff 16.6% 24.9%, #fff 24.9% 33.2%, #fff 33.2% 41.5%, #ff8585 41.8% 50.1%, #ff8585 50.1% 58.4%, #ff8585 58.4% 66.7%, #fff 66.7% 75.1%, #fff 75.1% 83.4%, #fff 83.4% 91.7%, #ff8585 91.7% 100%);
+#clock-chart {  
    border-radius: 50%;
-   width: 350px;
-   height: 350px;
    position: absolute;
    left: 50%;
    transform: translateX(-50%);
    z-index: 1;
+   width: 350px;
+   height: 350px;
+
+   background: conic-gradient( 
+      var(--one-hour), 
+      var(--two-hour), 
+      var(--tree-hour), 
+      var(--four-hour), 
+      var(--five-hour), 
+      var(--six-hour), 
+      var(--seven-hour), 
+      var(--eight-hour), 
+      var(--nine-hour), 
+      var(--ten-hour), 
+      var(--eleven-hour), 
+      var(--twelve-hour) 
+   );
 }
+/* -- /Диаграмма на часах -- */
+
  
