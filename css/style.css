@@ -7,15 +7,15 @@
    /* -- Время -- */
    --one-hour: var(--green) 0.00% 8.4%;
    --two-hour: var(--green) 8.4% 16.7%;
-   --tree-hour: var(--red) 16.7% 25%;
+   --tree-hour: var(--green) 16.7% 25%;
    --four-hour: var(--green) 25% 33.3%;
    --five-hour: var(--green) 33.3% 41.6%;
    --six-hour: var(--green) 41.6% 50%;
    --seven-hour: var(--green) 50% 58.4%;
-   --eight-hour: var(--red) 58.4% 66.7%;
+   --eight-hour: var(--green) 58.4% 66.7%;
    --nine-hour: var(--red) 66.7% 75%;
-   --ten-hour: var(--green) 75% 83.4%;
-   --eleven-hour: var(--green) 83.4% 91.6%;
+   --ten-hour: var(--red) 75% 83.4%;
+   --eleven-hour: var(--red) 83.4% 91.6%;
    --twelve-hour: var(--red) 91.6% 100%;
 }
 /* -- /Переменные -- */
