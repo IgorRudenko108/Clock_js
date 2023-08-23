@@ -1,0 +1,116 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #4d454e;
+}
+
+.clock{
+   width: 350px;
+   height: 350px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-size: cover;
+   border-radius: 50%;
+   z-index: 2;
+}
+
+.clock-img {
+   position: absolute;
+   z-index: 2;
+   width: 350px;
+   height: 350px;
+   flex: 0 0 350px;
+}
+
+.clock:before{
+   content: '';
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   background-color: #000;
+   border-radius: 50%;
+   z-index: 999;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+   position: absolute;
+}
+
+.clock .hour, .hr{
+   width: 160px;
+   height: 160px;
+}
+.clock .min, .mn{
+   width: 190px;
+   height: 190px;
+}
+.clock .sec, .sc{
+   width: 230px;
+   height: 230px;
+   z-index: 3;
+}
+
+.hr, .mn, .sc{
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.hr:before{
+   content: '';
+   position: absolute;
+   width: 8px;
+   height: 80px;
+   background-color: #ffc600;
+   z-index: 10;
+   border-radius: 6px 6px 0 0;
+}
+.mn:before{
+   content: '';
+   position: absolute;
+   width: 4px;
+   height: 90px;
+   background-color: #000;
+   z-index: 11;
+   border-radius: 6px 6px 0 0;
+}
+.sc:before{
+   content: '';
+   position: absolute;
+   width: 2px;
+   height: 150px;
+   background-color: #000;
+   z-index: 12;
+   border-radius: 6px 6px 0 0;
+}
+
+
+/*--------------------------------------  */
+#my-pie-chart-container {
+   display: flex;
+   align-items: center;
+}
+
+#my-pie-chart {
+   background: conic-gradient( #ff8585 0.00% 8.3%, #ff8585 8.3% 16.6%, #fff 16.6% 24.9%, #fff 24.9% 33.2%, #fff 33.2% 41.5%, #ff8585 41.8% 50.1%, #ff8585 50.1% 58.4%, #ff8585 58.4% 66.7%, #fff 66.7% 75.1%, #fff 75.1% 83.4%, #fff 83.4% 91.7%, #ff8585 91.7% 100%);
+   border-radius: 50%;
+   width: 350px;
+   height: 350px;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+}
+ 
